@@ -9,32 +9,31 @@ const navLinks = [
   { name: "Our Collection", type: "page" },
   { name: "About Us", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Contact", href: "#contact" },
   { name: "Investors", href: "#" },
 ];
 
 const faqItems = [
   { q: "What are the requirements to book?", a: "You must be at least 21 years old (25 for certain elite models), have a valid driver's license, and provide proof of full coverage insurance." },
-  { q: "What if I don't have full coverage insurance?", a: "We offer various rental car damage protection options. Please contact our concierge for details on opting in." },
+  { q: "What if I don't have full coverage insurance?", a: "We offer various rental car damage protection options. Please contact our team for details on opting in." },
   { q: "Do I still need personal car insurance if I opt in for protection?", a: "Rental damage protection is not a substitute for personal liability insurance. Requirements vary, so please confirm with your agent." },
   { q: "Can I add an additional driver to my rental?", a: "Yes, additional drivers can be added for a fee, provided they meet all age and insurance requirements." },
   { q: "What if my insurance deductible is over $2,500?", a: "We may require an additional security deposit or supplemental coverage in certain high-deductible cases." },
   { q: "Do you have any extra hidden fees?", a: "Transparency is key. We detail all costs upfront, including delivery, fuel, and security deposits." },
   { q: "Insurance requirements for business rentals?", a: "Business rentals require commercial insurance coverage or a verified corporate policy. Contact us for specifics." },
-  { q: "Do you offer delivery service?", a: "Yes! We offer delivery to DCA, IAD, BWI, Gaithersburg, DC, and custom locations across the DMV area." },
+  { q: "Do you offer delivery service?", a: "Yes! We offer delivery to Miami International Airport (MIA), Fort Lauderdale (FLL), and custom locations across the Miami area." },
   { q: "How many miles are included with my rental?", a: "Standard rentals typically include 100-150 miles per day. Excess mileage fees apply thereafter." },
   { q: "What is your security deposit policy?", a: "A refundable security deposit is required for all rentals. The amount varies based on the vehicle selected." },
   { q: "What is your cancellation policy?", a: "Cancellations made 72+ hours in advance are eligible for a credit. Late cancellations may incur fees." },
   { q: "Do you offer pick-up or drop-off outside of business hours?", a: "Yes, we offer flexible pick-up and drop-off options. Please coordinate with our team in advance for after-hours service." },
-  { q: "Do you offer roadside assistance?", a: "Every rental includes 24/7 roadside assistance for your peace of mind while exploring the DMV area." },
-  { q: "Less than 72 hour reservation?", a: "While we prefer advance booking, we can often accommodate last-minute requests. Call us directly for same-day availability." },
+  { q: "Do you offer roadside assistance?", a: "Every rental includes 24/7 roadside assistance for your peace of mind while exploring the Miami area." },
+  { q: "Less than 72 hour reservation?", a: "While we prefer advance booking, we can often accommodate last-minute requests. Check availability directly for same-day requests." },
   { q: "Do you offer military discount?", a: "We are proud to support our service members. Please inquire about our military discount program when booking." },
 ];
 
 const specs = [
   { val: "$715", label: "Starting / Day" },
   { val: "Elite", label: "Collection" },
-  { val: "DMV", label: "Coverage" },
+  { val: "MIAMI", label: "Coverage" },
   { val: "24/7", label: "Support" },
 ];
 
@@ -52,31 +51,17 @@ export default function App() {
         Skip to Main Content
       </a>
 
-      {/* Top Banner */}
-      <div className="relative z-101 bg-accent/90 text-black px-10 py-2 hidden md:flex justify-between items-center text-[10px] font-bold uppercase tracking-widest">
-        <div className="flex gap-8">
-          <a href="tel:4433328879" className="flex items-center gap-2 hover:opacity-70 transition-opacity"><Phone size={10} /> 443-332-8879</a>
-          <a href="mailto:exoticescapesrentals@gmail.com" className="flex items-center gap-2 hover:opacity-70 transition-opacity text-black">exoticescapesrentals@gmail.com</a>
-        </div>
-        <div className="flex gap-4">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:opacity-70 transition-opacity">Instagram</a>
-          <span>7917 Cessna Ave Gaithersburg MD</span>
-        </div>
-      </div>
-
       {/* Navigation */}
-      <nav className="fixed top-0 md:top-8 left-0 w-full z-100 flex items-center justify-between px-10 py-10 md:px-16 md:py-6 bg-linear-to-b from-luxury-black to-transparent pointer-events-none">
+      <nav className="fixed top-0 left-0 w-full z-100 flex items-center justify-between px-10 py-10 md:px-16 md:py-8 bg-linear-to-b from-luxury-black to-transparent pointer-events-none">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="flex items-center pointer-events-auto"
         >
-          <img 
-            src="https://static.wixstatic.com/media/dfb3c4_844d98727e4c4747a0276bb70b58193d~mv2.jpg/v1/fill/w_558,h_106,al_c,lg_1,q_80,enc_avif,quality_auto/IMG_9202_JPG.jpg" 
-            alt="Exotic Escapes Logo" 
-            className="h-12 md:h-14 w-auto object-contain pointer-events-auto"
-            referrerPolicy="no-referrer"
-          />
+          <div className="flex flex-col">
+            <span className="text-xl md:text-2xl font-bold tracking-tighter text-white uppercase leading-none">Exotic Car Rentals</span>
+            <span className="text-[10px] tracking-[0.4em] text-accent font-bold uppercase mt-1">Miami</span>
+          </div>
         </motion.div>
 
         <div className="hidden md:flex items-center gap-10 pointer-events-auto">
@@ -134,7 +119,7 @@ export default function App() {
           >
             <img
               src="https://static.wixstatic.com/media/dfb3c4_b13bf17accfb447ea85569809055bc07~mv2.jpg/v1/fill/w_1470,h_1290,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/dfb3c4_b13bf17accfb447ea85569809055bc07~mv2.jpg"
-              alt="Exotic Escapes Hero"
+              alt="Exotic Car Rentals Miami Hero"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
@@ -151,13 +136,13 @@ export default function App() {
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               <p className="font-serif text-xs uppercase tracking-[0.5em] text-accent mb-6 leading-none">
-                DMV / Maryland / Virginia
+                Miami / South Florida
               </p>
               <h1 className="text-6xl md:text-7xl lg:text-[88px] font-bold leading-[0.9] uppercase tracking-[-3px] mb-8">
                 Escape <span className="text-outline block mt-2">Ordinary</span> Today.
               </h1>
               <p className="text-white/60 text-base leading-relaxed max-w-[420px] mb-12 font-light">
-                Discover our exclusive collection of premium cars, each delivering outstanding performance and elegance. Experience the DMV the right of way.
+                Discover our exclusive collection of premium cars, each delivering outstanding performance and elegance. Experience Miami the right of way.
               </p>
               
               <div className="flex items-center gap-8">
@@ -229,7 +214,7 @@ export default function App() {
               <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-[0.85]">Special <br/> <span className="text-white/30 text-outline">Services.</span></h2>
             </div>
             <p className="text-white/40 text-base leading-relaxed max-w-md font-light">
-              At Exotic Escapes, we redefine the art of luxury travel. Whether you're celebrating a special occasion, traveling for work, or enjoying a romantic evening, our premium vehicle services are designed to elevate any event.
+              At Exotic Car Rentals Miami, we redefine the art of luxury travel. Whether you're celebrating a special occasion, traveling for work, or enjoying a romantic evening, our premium vehicle services are designed to elevate any event.
             </p>
           </div>
 
@@ -321,7 +306,7 @@ export default function App() {
             <div className="aspect-3/4 w-full bg-luxury-grey relative overflow-hidden border border-white/10 group">
               <img 
                 src="https://static.wixstatic.com/media/dfb3c4_b6f26321e375441caaf70f3e26f8cef5~mv2.jpg/v1/fill/w_980,h_1252,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/dfb3c4_b6f26321e375441caaf70f3e26f8cef5~mv2.jpg" 
-                alt="Exotic Escapes Passion" 
+                alt="Exotic Car Rentals Miami Passion" 
                 className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-all duration-1000"
                 referrerPolicy="no-referrer"
               />
@@ -331,10 +316,10 @@ export default function App() {
 
           <div className="relative">
             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent mb-6 block">We Share Your Passion</span>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-[0.85] mb-10">At Exotic Escapes, <br/> <span className="text-accent italic">Driving is Life.</span></h2>
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-[0.85] mb-10">At Exotic Car Rentals Miami, <br/> <span className="text-accent italic">Driving is Life.</span></h2>
             <div className="space-y-6 text-white/60 text-lg leading-relaxed font-light mb-12">
               <p>
-                At Exotic Escapes, we share a passion for luxury cars and a deep love for the driving experience. As a trusted luxury vehicle rental service in the DMV area, we pride ourselves on offering the latest, most exclusive cars to satisfy the desires of true car enthusiasts.
+                At Exotic Car Rentals Miami, we share a passion for luxury cars and a deep love for the driving experience. As a trusted luxury vehicle rental service in Miami, we pride ourselves on offering the latest, most exclusive cars to satisfy the desires of true car enthusiasts.
               </p>
               <p>
                 Whether you’re looking to make a statement, enjoy a thrilling ride, or simply experience the elegance of a high-end vehicle, we have the perfect car for you. Our fleet is meticulously curated, featuring only the finest, well-maintained vehicles, ensuring both luxury and reliability every time you hit the road.
@@ -347,7 +332,7 @@ export default function App() {
               </div>
               <div>
                 <p className="font-bold text-2xl mb-1 tracking-tighter">Premium</p>
-                <p className="text-[10px] uppercase tracking-widest text-white/30">DMV Experts</p>
+                <p className="text-[10px] uppercase tracking-widest text-white/30">Miami Experts</p>
               </div>
             </div>
             <button 
@@ -360,20 +345,20 @@ export default function App() {
         </div>
       </section>
 
-      {/* The Ultimate DMV Experience */}
+      {/* The Ultimate Miami Experience */}
       <section className="relative z-20 py-32 bg-luxury-black px-10 md:px-16 overflow-hidden">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent mb-4 block">The Ultimate DMV Experience</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent mb-4 block">The Ultimate Miami Experience</span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-none mb-8">Elevate Every <br/> <span className="text-white/30 text-outline">Journey.</span></h2>
             <p className="text-white/60 text-base leading-relaxed mb-10 font-light">
-              At Exotic Escapes, we don’t just offer luxury car rentals – we provide an unforgettable experience. Whether you're cruising the iconic streets of Washington, DC, exploring the dynamic landscapes of Northern Virginia, or driving through the elegance of Maryland, our fleet of premium vehicles ensures you travel in style, comfort, and sophistication.
+              At Exotic Car Rentals Miami, we don’t just offer luxury car rentals – we provide an unforgettable experience. Whether you're cruising the iconic streets of South Beach, exploring the dynamic landscapes of Brickell, or driving through the elegance of Coral Gables, our fleet of premium vehicles ensures you travel in style, comfort, and sophistication.
             </p>
             <div className="flex flex-col gap-6">
               {[
-                "Washington, DC City Cruises",
-                "Northern Virginia Landscapes",
-                "Maryland's Elegant Roads"
+                "South Beach City Cruises",
+                "Brickell Dynamic Landscapes",
+                "Coral Gables Elegant Roads"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-white/80">
                   <div className="w-6 h-[1px] bg-accent" />
@@ -390,7 +375,7 @@ export default function App() {
               referrerPolicy="no-referrer"
             />
             <div className="absolute bottom-10 right-10 p-10 bg-luxury-black/90 backdrop-blur-xl border border-accent/20 max-w-sm">
-                <p className="text-sm font-serif italic text-white/80 mb-4">"Join the ranks of those who choose to drive the extraordinary. Welcome to Exotic Escapes where your luxury journey begins."</p>
+                <p className="text-sm font-serif italic text-white/80 mb-4">"Join the ranks of those who choose to drive the extraordinary. Welcome to Exotic Car Rentals Miami where your luxury journey begins."</p>
                 <span className="text-[9px] font-bold uppercase tracking-widest text-accent">Drive Extraordinary</span>
             </div>
           </div>
@@ -412,7 +397,7 @@ export default function App() {
               {[
                 { step: "01", title: "Select Your Car", desc: "Explore our exclusive collection, select your desired luxury vehicle, and get ready for an unforgettable experience." },
                 { step: "02", title: "Quick Booking", desc: "Our simple and secure booking process ensures you're behind the wheel in no time." },
-                { step: "03", title: "Enjoy the Drive", desc: "Experience the simplified luxury of renting from Exotic Escapes. Choose, book, and enjoy." }
+                { step: "03", title: "Enjoy the Drive", desc: "Experience the simplified luxury of renting from Exotic Car Rentals Miami. Choose, book, and enjoy." }
               ].map((item, i) => (
                 <div key={i} className="flex gap-8 group">
                   <span className="text-5xl font-black text-white/5 group-hover:text-accent/20 transition-colors duration-500">{item.step}</span>
@@ -437,7 +422,7 @@ export default function App() {
                {[
                 { title: "Personalized Service", desc: "Enjoy dedicated support from our team ensuring a seamless rental experience tailored to you." },
                 { title: "Meticulous Care", desc: "Every vehicle is maintained to showroom standards for your safety and satisfaction." },
-                { title: "DMV Experts", desc: "We know the best routes and requirements across DC, Maryland, and Virginia." },
+                { title: "Miami Experts", desc: "We know the best routes and requirements across Miami and South Florida." },
                 { title: "Transparent Pricing", desc: "No hidden fees. What you see is what you pay for your luxury experience." }
               ].map((item, i) => (
                 <div key={i} className="p-8 border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-editorial">
@@ -457,7 +442,7 @@ export default function App() {
             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent mb-4 block">Support</span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-none mb-8">Frequently <br/> <span className="text-white/30 text-outline">Asked.</span></h2>
             <p className="text-white/40 text-sm leading-relaxed mb-10 font-light">
-              Find answers to common questions about our exotic car rental services in the DMV area.
+              Find answers to common questions about our exotic car rental services in the Miami area.
             </p>
              <button className="bg-white/5 border border-white/10 px-8 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-accent hover:text-black transition-all">
                 Download PDF Guide
@@ -497,73 +482,13 @@ export default function App() {
         </div>
       </section>
 
-      {/* Reservation / Contact */}
-      <section className="relative z-20 py-32 bg-black px-10 md:px-16" id="contact">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
-          <div>
-            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-accent mb-6 block">Ready to Drive?</span>
-            <h2 className="text-6xl md:text-8xl font-bold tracking-tighter uppercase leading-[0.85] mb-4">RESERVE YOUR <br/> <span className="text-accent italic">LUXURY RIDE NOW!</span></h2>
-            <p className="text-white/40 text-sm tracking-[0.2em] uppercase mb-12">Quick, Simple, and Secure Booking</p>
-            
-            <div className="space-y-10">
-                <div className="flex items-start gap-8">
-                  <div className="p-4 bg-white/5 rounded-sm"><Phone size={20} className="text-accent" /></div>
-                  <div>
-                    <p className="text-[9px] uppercase tracking-widest text-white/30 mb-2">Direct Line</p>
-                    <p className="text-xl font-bold tracking-tighter">443-332-8879</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-8">
-                  <div className="p-4 bg-white/5 rounded-sm"><Phone size={20} className="text-accent" /></div>
-                  <div>
-                    <p className="text-[9px] uppercase tracking-widest text-white/30 mb-2">Email Inquiry</p>
-                    <p className="text-xl font-bold tracking-tighter">exoticescapesrentals@gmail.com</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-8">
-                  <div className="p-4 bg-white/5 rounded-sm"><MapPin size={20} className="text-accent" /></div>
-                  <div>
-                    <p className="text-[9px] uppercase tracking-widest text-white/30 mb-2">Headquarters</p>
-                    <p className="text-xl font-bold tracking-tighter">7917 Cessna Ave Gaithersburg MD</p>
-                  </div>
-                </div>
-            </div>
-          </div>
-
-          <div className="bg-white/[0.02] border border-white/10 p-12 md:p-16 rounded-sm relative">
-            <h3 className="text-2xl font-bold uppercase tracking-tight mb-2">Reserve Your Vehicle</h3>
-            <p className="text-[10px] uppercase tracking-[0.3em] text-accent mb-10 block">Get in Touch</p>
-            <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <label className="text-[9px] uppercase tracking-widest text-white/30 font-bold">First name*</label>
-                    <input type="text" className="w-full bg-white/5 border-b border-white/10 py-4 focus:outline-none focus:border-accent transition-colors" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[9px] uppercase tracking-widest text-white/30 font-bold">Last name*</label>
-                    <input type="text" className="w-full bg-white/5 border-b border-white/10 py-4 focus:outline-none focus:border-accent transition-colors" />
-                  </div>
-               </div>
-               <div className="space-y-2">
-                  <label className="text-[9px] uppercase tracking-widest text-white/30 font-bold">Email*</label>
-                  <input type="email" className="w-full bg-white/5 border-b border-white/10 py-4 focus:outline-none focus:border-accent transition-colors" />
-               </div>
-               <div className="space-y-2">
-                  <label className="text-[9px] uppercase tracking-widest text-white/30 font-bold">Phone*</label>
-                  <input type="tel" className="w-full bg-white/5 border-b border-white/10 py-4 focus:outline-none focus:border-accent transition-colors" />
-               </div>
-               <button className="w-full py-6 bg-accent text-black text-xs font-bold uppercase tracking-[0.3em] hover:bg-white transition-all">Submit</button>
-            </form>
-          </div>
-        </div>
-      </section>
 
       {/* Reviews / Experience */}
       <section className="relative z-20 py-32 bg-white/5 backdrop-blur-xs">
         <div className="max-w-[1400px] mx-auto px-10 md:px-16 text-center">
             <h2 className="text-6xl md:text-9xl font-black text-white/[0.05] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none uppercase">Escape</h2>
             <div className="relative z-10 max-w-2xl mx-auto">
-                <p className="text-2xl md:text-3xl font-serif leading-relaxed italic mb-8">"The only company I trust for my DMV stays. The Lamborghini was pristine, and the delivery was flawlessly handled on the tarmac at IAD."</p>
+                <p className="text-2xl md:text-3xl font-serif leading-relaxed italic mb-8">"The only company I trust for my Miami stays. The Lamborghini was pristine, and the delivery was flawlessly handled directly at the airport."</p>
                 <div className="flex flex-col items-center">
                     <div className="w-12 h-px bg-accent mb-4" />
                     <span className="text-sm font-bold uppercase tracking-[0.3em]">Julian V.</span>
@@ -573,23 +498,18 @@ export default function App() {
         </div>
       </section>
 
-      {/* Footer / Contact simple */}
+      {/* Footer */}
       <footer id="contact" className="relative z-20 bg-linear-to-t from-black to-luxury-black border-t border-white/10 px-10 pt-32 pb-20 md:px-16">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           <div className="col-span-1 lg:col-span-1">
-            <img 
-              src="https://static.wixstatic.com/media/dfb3c4_844d98727e4c4747a0276bb70b58193d~mv2.jpg/v1/fill/w_558,h_106,al_c,lg_1,q_80,enc_avif,quality_auto/IMG_9202_JPG.jpg" 
-              alt="Exotic Escapes Logo" 
-              className="h-10 w-auto object-contain mb-8 block"
-              referrerPolicy="no-referrer"
-            />
+            <div className="flex flex-col mb-8">
+              <span className="text-lg md:text-xl font-bold tracking-tighter text-white uppercase leading-none">Exotic Car Rentals</span>
+              <span className="text-[10px] tracking-[0.4em] text-accent font-bold uppercase mt-1">Miami</span>
+            </div>
             <p className="text-white/40 text-[11px] leading-relaxed max-w-[240px] uppercase tracking-widest mb-10">
               Escape Ordinary. The latest, most exclusive cars to satisfy the desires of true car enthusiasts.
             </p>
           <div className="flex gap-4">
-               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-accent transition-editorial cursor-pointer group">
-                <span className="text-[10px] font-bold group-hover:text-accent">IG</span>
-               </a>
                <div className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-accent transition-editorial cursor-pointer group">
                 <span className="text-[10px] font-bold group-hover:text-accent">X</span>
                </div>
@@ -605,31 +525,30 @@ export default function App() {
               <a href="#fleet" className="hover:text-white transition-colors">Our Full Collection</a>
               <a href="#services" className="hover:text-white transition-colors">Concierge Services</a>
               <a href="#faq" className="hover:text-white transition-colors">Rental Requirements</a>
-              <a href="#contact" className="hover:text-white transition-colors">Book Now</a>
+              <p className="cursor-default">Book Now</p>
             </div>
           </div>
 
           <div>
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] mb-10 text-accent">Contact</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] mb-10 text-accent">Locations</h4>
             <div className="flex flex-col gap-6 text-[11px] uppercase tracking-widest text-white/40">
-              <p>7917 Cessna Ave Gaithersburg MD 20879</p>
-              <p>exoticescapesrentals@gmail.com</p>
-              <p>DCA / IAD / BWI Airport Service</p>
-              <p>DMV Region Delivery</p>
+              <p>Miami, Florida</p>
+              <p>Miami International Airport Service</p>
+              <p>South Florida Region Delivery</p>
             </div>
           </div>
 
           <div className="bg-white/5 p-10 border border-white/10 rounded-sm">
             <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] mb-8 text-accent">Reservations</h4>
-            <p className="text-sm font-bold mb-6 tracking-widest uppercase">443-332-8879</p>
+            <p className="text-xs font-bold mb-6 tracking-widest uppercase">Inquire Online</p>
             <button className="w-full py-4 border border-accent text-accent text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-accent hover:text-black transition-all">
-              Request Inquiry
+              Collection Inquiry
             </button>
           </div>
         </div>
         
         <div className="max-w-[1400px] mx-auto border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-<p className="text-[9px] uppercase tracking-[0.4em] text-white/20">&copy; 2025 EXOTIC ESCAPES. ALL RIGHTS RESERVED.</p>
+<p className="text-[9px] uppercase tracking-[0.4em] text-white/20">&copy; 2025 EXOTIC CAR RENTALS MIAMI. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-10">
             <a href="#" className="text-[9px] uppercase tracking-[0.4em] text-white/20 hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="text-[9px] uppercase tracking-[0.4em] text-white/20 hover:text-white transition-colors">Terms of Fleet</a>
